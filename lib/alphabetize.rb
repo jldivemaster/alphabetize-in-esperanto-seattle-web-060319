@@ -1,4 +1,8 @@
 def alphabetize(arr)
-  esp_alpha = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
-  arr.sort_by{ |a| esp_alpha }
+  esp_alph = " abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+  arr.sort_by {|string|  
+    [esp_alph.index(string[0]),
+     esp_alph.index(string[1]),
+     esp_alph.index(string[2]),
+     esp_alph.index(string[3])]}
 end
